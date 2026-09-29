@@ -1,44 +1,224 @@
 [
-  { "slug": "digitalis-irodalomtudomany", "title": "Digitális irodalomtudomány", "subtitle": "Olvasás, számítás és ábrázolás egysége az irodalmi elemzésben", "title_en": null,
-    "authors": ["Szemes Botond"], "translators": [], "editors": [], "year": 2024, "isbn": "9786156535108",
-    "cover": "digitalis-irodalomtudomany.jpg", "shop": "https://kijarat.hu/termek/digitalis-irodalomtudomany-olvasas-szamitas-es-abrazolas-egysege-az-irodalmi-elemzesben/" },
-  { "slug": "a-betegseg-kepei", "title": "A betegség képei", "subtitle": "Képalkotás, test és kultúra a 19–20. század fordulóján", "title_en": null,
-    "authors": ["Pótó Júlia"], "translators": [], "editors": [], "year": 2023, "isbn": "9786156535054",
-    "cover": "a-betegseg-kepei.jpg", "shop": "https://kijarat.hu/termek/a-betegseg-kepei-kepalkotas-test-es-kultura-a-19-20-szazad-fordulojan/" },
-  { "slug": "foldkozelben-karantenban", "title": "Földközelben – Karanténban", "subtitle": "Hogyan tájékozódjunk a politikában? – Mit tanultunk a járványból?", "title_en": null,
-    "authors": ["Bruno Latour"], "translators": ["Kun János Róbert"], "editors": [], "year": 2023, "isbn": "9786156535085",
-    "cover": "foldkozelben-karantenban.jpg", "shop": "https://kijarat.hu/termek/foldkozelben-hogyan-tajekozodjunk-a-politikaban-karantenban-mit-tanultunk-a-jarvanybol/" },
-  { "slug": "a-halo-es-az-ollo", "title": "A háló és az olló", "subtitle": "Cholnoky László írásstratégiái és publikálási gyakorlata (1900–1929)", "title_en": null,
-    "authors": ["Wirágh András"], "translators": [], "editors": [], "year": 2022, "isbn": "9786155160998",
-    "cover": null, "shop": "https://kijarat.hu/termek/a-halo-es-az-ollo-cholnoky-laszlo-irasstrategiai-es-publikalasi-gyakorlata-1900-1929/" },
-  { "slug": "arnyekvers-es-ironia", "title": "Árnyékvers és irónia", "subtitle": "Esszék, tanulmányok, esszéversek", "title_en": null,
-    "authors": ["Vörös István"], "translators": [], "editors": [], "year": 2022, "isbn": "9786155160981",
-    "cover": "arnyekvers-es-ironia.jpg", "shop": "https://kijarat.hu/termek/arnyekvers-es-ironia-esszek-tanulmanyok-esszeversek/" },
-  { "slug": "poszthumanista-olvasatok", "title": "H. P. Lovecraft – Poszthumanista olvasatok", "subtitle": null, "title_en": null,
-    "authors": ["Horváth Márk", "Lovász Ádám", "Nemes Z. Márió"], "translators": [], "editors": [], "year": 2022, "isbn": "9786155160974",
-    "cover": "poszthumanista-olvasatok.jpg", "shop": "https://kijarat.hu/termek/poszthumanista-olvasatok/" },
-  { "slug": "kultura-es-kontaminacio", "title": "Kultúra és kontamináció", "subtitle": "A járvány metaforái és biopolitikája kortárs regényekben", "title_en": null,
-    "authors": ["Ureczky Eszter"], "translators": [], "editors": [], "year": 2022, "isbn": "9786155160929",
-    "cover": "kultura-es-kontaminacio.jpg", "shop": "https://kijarat.hu/termek/kultura-es-kontaminacio-a-jarvany-metaforai-es-biopolitikaja-kortars-regenyekben/" },
-  { "slug": "orokolt-blende", "title": "Örökölt blende", "subtitle": "Példázatos irodalom és a Mészöly-hagyaték", "title_en": null,
-    "authors": ["Márjánovics Diána"], "translators": [], "editors": [], "year": 2022, "isbn": "9786155160912",
-    "cover": "orokolt-blende.jpg", "shop": "https://kijarat.hu/termek/orokolt-blende-peldazatos-irodalom-es-a-meszoly-hagyatek/" },
-  { "slug": "regenyparhuzamok", "title": "Regénypárhuzamok", "subtitle": null, "title_en": null,
-    "authors": ["Tanos Márton"], "translators": [], "editors": [], "year": 2022, "isbn": "9786156535016",
-    "cover": "regenyparhuzamok.jpg", "shop": "https://kijarat.hu/termek/regenyparhuzamok/" },
-  { "slug": "studiolo", "title": "Studiolo", "subtitle": null, "title_en": null,
-    "authors": ["Giorgio Agamben"], "translators": ["Darida Veronika"], "editors": [], "year": 2021, "isbn": "9786155160905",
-    "cover": null, "shop": "https://kijarat.hu/termek/studiolo/" },
-  { "slug": "hibrid-gondolkodas", "title": "Hibrid gondolkodás", "subtitle": "Válogatott tanulmányok", "title_en": null,
-    "authors": ["Bruno Latour"], "translators": ["Keresztes Balázs"], "editors": [], "year": 2021, "isbn": "9786155160882",
-    "cover": "hibrid-gondolkodas.jpg", "shop": "https://kijarat.hu/termek/hibrid-gondolkodas-valogatott-tanulmanyok/" },
-  { "slug": "transzmedia", "title": "Transzmédia", "subtitle": "Interdiszciplináris tanulmányok", "title_en": null,
-    "authors": [], "translators": [], "editors": ["Gregor Lilla", "Fejes Richárd"], "year": 2021, "isbn": "9786155160844",
-    "cover": "transzmedia.jpg", "shop": "https://kijarat.hu/termek/transzmedia-interdiszciplinaris-tanulmanyok/" },
-  { "slug": "a-termeszeti-szerzodes", "title": "A természeti szerződés", "subtitle": null, "title_en": null,
-    "authors": ["Michel Serres"], "translators": ["Seregi Tamás"], "editors": [], "year": 2021, "isbn": "9786155160899",
-    "cover": "a-termeszeti-szerzodes.jpg", "shop": "https://kijarat.hu/termek/a-termeszeti-szerzodes/" },
-  { "slug": "a-hatarsertes-technologiai", "title": "A határsértés technológiái", "subtitle": "Alkalmazott filozófiai tanulmányok a poszthumán állapotról", "title_en": null,
-    "authors": ["Horváth Márk", "Lovász Ádám"], "translators": [], "editors": [], "year": 2021, "isbn": "9786155160837",
-    "cover": "a-hatarsertes-technologiai.jpg", "shop": "https://kijarat.hu/termek/a-hatarsertes-technologiai-alkalmazott-filozofiai-tanulmanyok-a-poszthuman-allapotrol/" }
+  {
+    "slug": "digitalis-irodalomtudomany",
+    "title": "Digitális irodalomtudomány",
+    "subtitle": "Olvasás, számítás és ábrázolás egysége az irodalmi elemzésben",
+    "title_en": "Digital Literary Studies: Reading, Computation and Representation in Literary Analysis",
+    "authors": [
+      "Szemes Botond"
+    ],
+    "translators": [],
+    "editors": [],
+    "year": 2024,
+    "isbn": "9786156535108",
+    "cover": "digitalis-irodalomtudomany.jpg",
+    "shop": "https://kijarat.hu/termek/digitalis-irodalomtudomany-olvasas-szamitas-es-abrazolas-egysege-az-irodalmi-elemzesben/"
+  },
+  {
+    "slug": "a-betegseg-kepei",
+    "title": "A betegség képei",
+    "subtitle": "Képalkotás, test és kultúra a 19–20. század fordulóján",
+    "title_en": "Images of Illness: Imaging, Body and Culture at the Turn of the 19th and 20th Centuries",
+    "authors": [
+      "Pótó Júlia"
+    ],
+    "translators": [],
+    "editors": [],
+    "year": 2023,
+    "isbn": "9786156535054",
+    "cover": "a-betegseg-kepei.jpg",
+    "shop": "https://kijarat.hu/termek/a-betegseg-kepei-kepalkotas-test-es-kultura-a-19-20-szazad-fordulojan/"
+  },
+  {
+    "slug": "foldkozelben-karantenban",
+    "title": "Földközelben – Karanténban",
+    "subtitle": "Hogyan tájékozódjunk a politikában? – Mit tanultunk a járványból?",
+    "title_en": "Down to Earth – In Quarantine",
+    "authors": [
+      "Bruno Latour"
+    ],
+    "translators": [
+      "Kun János Róbert"
+    ],
+    "editors": [],
+    "year": 2023,
+    "isbn": "9786156535085",
+    "cover": "foldkozelben-karantenban.jpg",
+    "shop": "https://kijarat.hu/termek/foldkozelben-hogyan-tajekozodjunk-a-politikaban-karantenban-mit-tanultunk-a-jarvanybol/"
+  },
+  {
+    "slug": "a-halo-es-az-ollo",
+    "title": "A háló és az olló",
+    "subtitle": "Cholnoky László írásstratégiái és publikálási gyakorlata (1900–1929)",
+    "title_en": "The Net and the Scissors: László Cholnoky’s Writing Strategies and Publishing Practice (1900–1929)",
+    "authors": [
+      "Wirágh András"
+    ],
+    "translators": [],
+    "editors": [],
+    "year": 2022,
+    "isbn": "9786155160998",
+    "cover": null,
+    "shop": "https://kijarat.hu/termek/a-halo-es-az-ollo-cholnoky-laszlo-irasstrategiai-es-publikalasi-gyakorlata-1900-1929/"
+  },
+  {
+    "slug": "arnyekvers-es-ironia",
+    "title": "Árnyékvers és irónia",
+    "subtitle": "Esszék, tanulmányok, esszéversek",
+    "title_en": "Shadow Verse and Irony: Essays, Studies, Essay-Poems",
+    "authors": [
+      "Vörös István"
+    ],
+    "translators": [],
+    "editors": [],
+    "year": 2022,
+    "isbn": "9786155160981",
+    "cover": "arnyekvers-es-ironia.jpg",
+    "shop": "https://kijarat.hu/termek/arnyekvers-es-ironia-esszek-tanulmanyok-esszeversek/"
+  },
+  {
+    "slug": "poszthumanista-olvasatok",
+    "title": "H. P. Lovecraft – Poszthumanista olvasatok",
+    "subtitle": null,
+    "title_en": "H. P. Lovecraft – Posthumanist Readings",
+    "authors": [
+      "Horváth Márk",
+      "Lovász Ádám",
+      "Nemes Z. Márió"
+    ],
+    "translators": [],
+    "editors": [],
+    "year": 2022,
+    "isbn": "9786155160974",
+    "cover": "poszthumanista-olvasatok.jpg",
+    "shop": "https://kijarat.hu/termek/poszthumanista-olvasatok/"
+  },
+  {
+    "slug": "kultura-es-kontaminacio",
+    "title": "Kultúra és kontamináció",
+    "subtitle": "A járvány metaforái és biopolitikája kortárs regényekben",
+    "title_en": "Culture and Contamination: Metaphors and Biopolitics of the Epidemic in Contemporary Novels",
+    "authors": [
+      "Ureczky Eszter"
+    ],
+    "translators": [],
+    "editors": [],
+    "year": 2022,
+    "isbn": "9786155160929",
+    "cover": "kultura-es-kontaminacio.jpg",
+    "shop": "https://kijarat.hu/termek/kultura-es-kontaminacio-a-jarvany-metaforai-es-biopolitikaja-kortars-regenyekben/"
+  },
+  {
+    "slug": "orokolt-blende",
+    "title": "Örökölt blende",
+    "subtitle": "Példázatos irodalom és a Mészöly-hagyaték",
+    "title_en": "Inherited Aperture: Parabolic Literature and the Mészöly Legacy",
+    "authors": [
+      "Márjánovics Diána"
+    ],
+    "translators": [],
+    "editors": [],
+    "year": 2022,
+    "isbn": "9786155160912",
+    "cover": "orokolt-blende.jpg",
+    "shop": "https://kijarat.hu/termek/orokolt-blende-peldazatos-irodalom-es-a-meszoly-hagyatek/"
+  },
+  {
+    "slug": "regenyparhuzamok",
+    "title": "Regénypárhuzamok",
+    "subtitle": null,
+    "title_en": "Novel Parallels",
+    "authors": [
+      "Tanos Márton"
+    ],
+    "translators": [],
+    "editors": [],
+    "year": 2022,
+    "isbn": "9786156535016",
+    "cover": "regenyparhuzamok.jpg",
+    "shop": "https://kijarat.hu/termek/regenyparhuzamok/"
+  },
+  {
+    "slug": "studiolo",
+    "title": "Studiolo",
+    "subtitle": null,
+    "title_en": "Studiolo",
+    "authors": [
+      "Giorgio Agamben"
+    ],
+    "translators": [
+      "Darida Veronika"
+    ],
+    "editors": [],
+    "year": 2021,
+    "isbn": "9786155160905",
+    "cover": null,
+    "shop": "https://kijarat.hu/termek/studiolo/"
+  },
+  {
+    "slug": "hibrid-gondolkodas",
+    "title": "Hibrid gondolkodás",
+    "subtitle": "Válogatott tanulmányok",
+    "title_en": "Hybrid Thinking: Selected Essays",
+    "authors": [
+      "Bruno Latour"
+    ],
+    "translators": [
+      "Keresztes Balázs"
+    ],
+    "editors": [],
+    "year": 2021,
+    "isbn": "9786155160882",
+    "cover": "hibrid-gondolkodas.jpg",
+    "shop": "https://kijarat.hu/termek/hibrid-gondolkodas-valogatott-tanulmanyok/"
+  },
+  {
+    "slug": "transzmedia",
+    "title": "Transzmédia",
+    "subtitle": "Interdiszciplináris tanulmányok",
+    "title_en": "Transmedia: Interdisciplinary Studies",
+    "authors": [],
+    "translators": [],
+    "editors": [
+      "Gregor Lilla",
+      "Fejes Richárd"
+    ],
+    "year": 2021,
+    "isbn": "9786155160844",
+    "cover": "transzmedia.jpg",
+    "shop": "https://kijarat.hu/termek/transzmedia-interdiszciplinaris-tanulmanyok/"
+  },
+  {
+    "slug": "a-termeszeti-szerzodes",
+    "title": "A természeti szerződés",
+    "subtitle": null,
+    "title_en": "The Natural Contract",
+    "authors": [
+      "Michel Serres"
+    ],
+    "translators": [
+      "Seregi Tamás"
+    ],
+    "editors": [],
+    "year": 2021,
+    "isbn": "9786155160899",
+    "cover": "a-termeszeti-szerzodes.jpg",
+    "shop": "https://kijarat.hu/termek/a-termeszeti-szerzodes/"
+  },
+  {
+    "slug": "a-hatarsertes-technologiai",
+    "title": "A határsértés technológiái",
+    "subtitle": "Alkalmazott filozófiai tanulmányok a poszthumán állapotról",
+    "title_en": "Technologies of Transgression: Studies in Applied Philosophy on the Posthuman Condition",
+    "authors": [
+      "Horváth Márk",
+      "Lovász Ádám"
+    ],
+    "translators": [],
+    "editors": [],
+    "year": 2021,
+    "isbn": "9786155160837",
+    "cover": "a-hatarsertes-technologiai.jpg",
+    "shop": "https://kijarat.hu/termek/a-hatarsertes-technologiai-alkalmazott-filozofiai-tanulmanyok-a-poszthuman-allapotrol/"
+  }
 ]
