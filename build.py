@@ -394,7 +394,7 @@ def build_home(ctx):
     rows = []
     for i, p in enumerate(d["projects"], 1):
         media, kind = project_media(ctx, p)
-        color = f' data-color="{p["color"]}"' if p.get("color") else ""
+        color = f' data-color="{p["color"]}" style="--project-color:{p["color"]}"' if p.get("color") else ""
         rows.append(
             f'    <li class="project-row" data-type="{p["type"]}"{color}>\n'
             f'      <a class="project-row__link" href="{ctx.url("/" + p["slug"] + "/")}">\n'

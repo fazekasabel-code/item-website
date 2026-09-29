@@ -30,7 +30,7 @@ section.current-projects > h2.section-title, ul.current-projects__list
     p.project-card__kicker > span (type) + span (years)
     h3.project-card__title, p.project-card__summary
 section.project-index > h2.section-title, ol.project-index__list
-  li.project-row[data-type][data-color] > a.project-row__link
+  li.project-row[data-type][data-color][style=--project-color] > a.project-row__link
     span.project-row__num, .project-row__title, .project-row__type, .project-row__years, .project-row__summary
     span.project-row__preview[hidden]        (copy of the media, used by preview.js)
 section.book-strip > h2.section-title > a, ul.book-strip__list > li.book-strip__item > a > img.book-strip__cover
