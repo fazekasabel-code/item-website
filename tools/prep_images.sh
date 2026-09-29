@@ -42,3 +42,8 @@ cp $F/visegrad/VF-logotype-black.png assets/funders/visegrad-black.png
 cp $F/visegrad/VF-logotype-white.png assets/funders/visegrad-white.png
 cp legacy/site/wp-content/themes/zita/third-party/fonts/Catamaran-Regular.ttf assets/fonts/Catamaran-Variable.ttf
 echo done
+
+# Official covers downloaded from kijarat.hu (2026-09-29): 3D mockups, cropped to portrait.
+K=legacy/found_images/kijarat
+sips -s format jpeg -s formatOptions 82 -c 1400 1000 $K/studiolo.webp --out content/covers/studiolo.jpg >/dev/null
+sips -s format jpeg -s formatOptions 82 -c 880 620 $K/a-halo-es-az-ollo.webp --out content/covers/a-halo-es-az-ollo.jpg >/dev/null

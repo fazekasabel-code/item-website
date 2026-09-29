@@ -4,8 +4,7 @@ Changes made to the text recovered from the old site (2026-09-29), so they can b
 
 **Corrections of obvious errors**
 - Kijárat: "Giorgo Agamben" → Giorgio; "Neme Z. Márió" → Nemes Z. Márió.
-- Kijárat: the old page listed *Studiolo* but its recovered cover image was a different Agamben book
-  (*A nyitott*). It is not used, so Studiolo shows a typographic cover until the right image is added.
+- Kijárat: the old page listed *Studiolo* but its recovered cover was a different Agamben book (*A nyitott*). Replaced with the official Studiolo cover from kijarat.hu; the Wirágh cover (never recovered) also comes from kijarat.hu.
 - Book titles and subtitles taken from the Kijárat Kiadó shop (kijarat.hu), plus ISBNs and shop links.
 - CSG: "Computational Stylistic Group" → Computational Stylistics Group (its official name; the URL
   slug stays as before); "doncense" → docense; "et. al." → et al.; "Artjoms Sela" → Artjoms Šeļa;

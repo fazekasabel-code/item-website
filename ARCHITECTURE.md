@@ -396,3 +396,5 @@ Where the build differs from the plan above:
 - **Images** are prepared once by `tools/prep_images.sh` (macOS `sips`): WebP files saved as `.jpg` are
   converted, and sizes are capped. `build.py` only copies files and reads their dimensions.
 - The repo lives at `~/code/item-website` (outside iCloud). The iCloud folder keeps the originals.
+- **Design:** direction B ("the frame and the picture") was chosen on 2026-09-29 and is now `assets/style.css`.
+  `designs/` keeps all three explorations, and `tools/compare.html` is the side-by-side viewer.
