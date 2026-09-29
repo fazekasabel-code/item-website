@@ -19,7 +19,10 @@ $alternates
 <a class="skip-link" href="#main">$skip</a>
 <header class="site-header">
   <a class="site-header__brand" href="$home_url" aria-label="$site_short">
-    <img class="site-header__logo" src="$asset_base/brand/item-logo.jpg" alt="$site_short" width="656" height="200">
+    <picture>
+      <source srcset="$asset_base/brand/item-logo-dark.png" media="(prefers-color-scheme: dark)">
+      <img class="site-header__logo" src="$asset_base/brand/item-logo.png" alt="$site_short" width="647" height="207">
+    </picture>
   </a>
   <nav class="site-nav" aria-label="$nav_label">
     <ul class="site-nav__list">

@@ -11,7 +11,7 @@ on `.typo-cover`. Either may be absent, so always provide a fallback.
 body.home | body.project-page.project-page--<type> | body.page-rolunk | body.page-kapcsolat | body.notfound-page
   a.skip-link
   header.site-header
-    a.site-header__brand > img.site-header__logo          (I.T.E.M. logo, 656×200 JPEG, white background)
+    a.site-header__brand > picture > img.site-header__logo  (I.T.E.M. logo, transparent PNG 647×207; white-lettered variant in dark mode)
     nav.site-nav > ul.site-nav__list > li.site-nav__item > a.site-nav__link[aria-current=page]
                  + a.site-nav__lang                        (EN / HU switch)
   main#main.site-main
@@ -68,6 +68,6 @@ article.page.page--(rolunk|kapcsolat) > header.page-header > h1.page-header__tit
 ## Fixed rules for any design
 - Funder logos (EU, Visegrad) must not be recoloured, filtered, cropped or placed on busy backgrounds.
   The Visegrad logo needs clear space, and a white version is swapped in automatically in dark mode.
-- The I.T.E.M. logo is a JPEG on white. Place it on white/near-white or frame it.
+- The I.T.E.M. logo is transparent (tools/make_logo.py); its red #f90c10 and green #6dfaa6 are the brand accents.
 - Must work from 320 px wide, with no horizontal page scroll, visible focus states and `prefers-reduced-motion`.
 - Hungarian characters (ő ű Ő Ű) must render in the chosen fonts.
