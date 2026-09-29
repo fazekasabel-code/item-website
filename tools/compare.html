@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design Comparison</title>
+<style>
+  :root { --bg:#eceae4; --fg:#15161a; --muted:#5d5f66; --line:#cfccc3; --panel:#fff; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#16171a; --fg:#eceae4; --muted:#a3a39d; --line:#34353a; --panel:#1f2024; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 14px/1.4 system-ui, sans-serif; }
+  header { position: sticky; top: 0; z-index: 2; display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center;
+           padding: 12px 16px; background: var(--bg); border-bottom: 1px solid var(--line); }
+  h1 { font-size: 15px; margin: 0; }
+  .group { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+  .group span { color: var(--muted); margin-right: 4px; }
+  button { font: inherit; padding: 5px 10px; border: 1px solid var(--line); background: var(--panel); color: var(--fg); border-radius: 4px; cursor: pointer; }
+  button[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+  main { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; padding: 16px; }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+  .col h2 { font-size: 14px; margin: 0 0 2px; }
+  .col p { margin: 0 0 8px; color: var(--muted); font-size: 12.5px; }
+  .col a { color: inherit; }
+  .viewport { position: relative; overflow: hidden; background: #fff; border: 1px solid var(--line); border-radius: 6px; }
+  .viewport iframe { position: absolute; top: 0; left: 0; border: 0; transform-origin: 0 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>I.T.E.M. · 3 design directions</h1>
+  <div class="group" id="pages"><span>Page</span></div>
+  <div class="group" id="widths"><span>Width</span></div>
+  <div class="group" id="langs"><span>Lang</span></div>
+</header>
+<main id="cols"></main>
+<script>
+  const designs = [
+    ["a", "A · Editorial archive", "Paper, serif reading type, hairline index; I.T.E.M. red as the only accent."],
+    ["b", "B · Frame & picture", "Neutral chrome; each project page opens in a full-bleed hero in its own colour."],
+    ["c", "C · Swiss catalogue", "12-column grid, mono metadata, black/white with mint as the functional accent."],
+  ];
+  const pages = [["Home", ""], ["Kijárat", "kijarat/"], ["Holy Week", "holy-week/"], ["Fresh Fabrik", "freshfabrik/"],
+                 ["neurodiverz", "neurodiverz-xyz/"], ["Mészöly 100", "meszoly-100/"], ["Rólunk", "rolunk/"], ["Kapcsolat", "kapcsolat/"]];
+  const widths = [["Desktop 1440", 1440, 1000], ["Laptop 1100", 1100, 800], ["Phone 390", 390, 844]];
+  const state = { page: "", width: 1440, height: 1000, lang: "" };
+  const cols = document.getElementById("cols");
+
+  function buttons(id, items, key, apply) {
+    const g = document.getElementById(id);
+    items.forEach(([label, ...v]) => {
+      const b = document.createElement("button");
+      b.textContent = label;
+      b.onclick = () => { apply(...v); [...g.querySelectorAll("button")].forEach(x => x.setAttribute("aria-pressed", x === b)); render(); };
+      b.setAttribute("aria-pressed", v[0] === state[key]);
+      g.append(b);
+    });
+  }
+  buttons("pages", pages, "page", v => state.page = v);
+  buttons("widths", widths, "width", (w, h) => { state.width = w; state.height = h; });
+  buttons("langs", [["HU", ""], ["EN", "en/"]], "lang", v => state.lang = v);
+
+  function render() {
+    cols.innerHTML = "";
+    designs.forEach(([key, name, desc]) => {
+      const url = `/${key}/${state.lang}${state.page}`;
+      const col = document.createElement("section");
+      col.className = "col";
+      col.innerHTML = `<h2>${name}</h2><p>${desc} <a href="${url}" target="_blank">Open ↗</a></p><div class="viewport"><iframe src="${url}" title="${name}"></iframe></div>`;
+      cols.append(col);
+    });
+    fit();
+  }
+  function fit() {
+    document.querySelectorAll(".viewport").forEach(v => {
+      const f = v.querySelector("iframe");
+      const scale = Math.min(1, v.clientWidth / state.width);
+      f.style.width = state.width + "px";
+      f.style.height = (state.height * 3) + "px";
+      f.style.transform = `scale(${scale})`;
+      v.style.height = Math.round(state.height * 3 * scale) + "px";
+      if (state.width === 390) { v.style.maxWidth = Math.round(390 * scale) + "px"; } else { v.style.maxWidth = ""; }
+    });
+  }
+  addEventListener("resize", fit);
+  render();
+</script>
+</body>
+</html>
