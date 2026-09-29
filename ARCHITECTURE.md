@@ -377,3 +377,22 @@ no `reference`. The domain **no longer resolves**, so `links: []`.
 
 1. Book `title_en` glosses: Claude drafts them, Ábel approves (they appear publicly).
 2. Whether the About page lists the board (kuratórium), and whether to add an SZJA 1 % line.
+
+---
+
+## 14. Implementation notes (foundation built 2026-09-29)
+
+Where the build differs from the plan above:
+- **Names:** stored once, in Hungarian order, everywhere (`people[].names`, book authors). `content/names.json`
+  maps Hungarian names to English order for the EN site. Foreign names are shown unchanged.
+- **Kijárat** is a normal project (`/kijarat/`) whose page adds the 14-book list, so there is no separate
+  `kijarat.html` template. Books are sorted newest first, keeping file order within a year.
+- **Templates:** `base`, `home`, `project`, `page`, `redirect`, `notfound`. The class contract is in
+  `templates/README.md`.
+- **Draft mode:** `--draft` shows the source-language text with a notice where a translation is
+  missing. The default build is strict and fails.
+- **Design previews:** `--style designs/x/style.css --out previews/x --base /x` builds a variant into its
+  own folder without touching `docs/`.
+- **Images** are prepared once by `tools/prep_images.sh` (macOS `sips`): WebP files saved as `.jpg` are
+  converted, and sizes are capped. `build.py` only copies files and reads their dimensions.
+- The repo lives at `~/code/item-website` (outside iCloud). The iCloud folder keeps the originals.
