@@ -1,0 +1,10 @@
+{
+  "title": { "hu": "Rólunk", "en": "About" },
+  "summary": {
+    "hu": "Az I.T.E.M. Kulturális és Oktatási Alapítvány összekötő kapocs az oktatás és a tudomány világa, valamint az alulról jövő kulturális és oktatási kezdeményezések között.",
+    "en": "The I.T.E.M. Foundation links the worlds of education and research with grassroots cultural and educational initiatives."
+  },
+  "source_lang": "hu",
+  "show_board": true,
+  "proofread": { "hu": false, "en": false }
+}

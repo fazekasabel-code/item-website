@@ -1,0 +1,68 @@
+{
+  "order": 3,
+  "type": "academy",
+  "years": [
+    2023
+  ],
+  "ongoing": false,
+  "status": "archived",
+  "color": null,
+  "source_lang": "en",
+  "title": {
+    "hu": "HANGZAVART?",
+    "en": "HANGZAVART?"
+  },
+  "summary": {
+    "hu": "Nem akadémiai zenei akadémia: 24 zenész és zeneszerző Magyarországról, Romániából és Szerbiából kilenc napig alkotott együtt Zebegényben.",
+    "en": "A non-academic music academy: 24 musicians and composers from Hungary, Romania and Serbia co-creating for nine days in Zebegény."
+  },
+  "place": {
+    "hu": "Zebegény",
+    "en": "Zebegény, Hungary"
+  },
+  "dates": {
+    "hu": "2023. június 21–30.",
+    "en": "21–30 June 2023"
+  },
+  "people": [
+    {
+      "role": {
+        "hu": "Mentorok",
+        "en": "Mentors"
+      },
+      "names": [
+        "Bali János",
+        "Bodnár Eszter",
+        "John Duncan",
+        "Márton Péter",
+        "Rimóczi István"
+      ]
+    },
+    {
+      "role": {
+        "hu": "Koncepció és szervezés",
+        "en": "Concept and organising"
+      },
+      "names": [
+        "Sanna Bo",
+        "Fazekas Ábel"
+      ]
+    }
+  ],
+  "partners": [],
+  "funding": [
+    {
+      "funder": "eu",
+      "reference": null
+    }
+  ],
+  "facts": [],
+  "links": [],
+  "role": null,
+  "cover": null,
+  "logo": null,
+  "proofread": {
+    "hu": false,
+    "en": false
+  }
+}

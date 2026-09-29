@@ -1,0 +1,10 @@
+{
+  "title": { "hu": "Kapcsolat", "en": "Contact" },
+  "summary": {
+    "hu": "Az I.T.E.M. Kulturális és Oktatási Alapítvány elérhetőségei és hivatalos adatai.",
+    "en": "Contact details and legal information of the I.T.E.M. Foundation."
+  },
+  "source_lang": "hu",
+  "show_contact": true,
+  "proofread": { "hu": false, "en": false }
+}

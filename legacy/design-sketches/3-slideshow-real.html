@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sketch 3b — Slideshow (valódi anyagokkal) · I.T.E.M. Alapítvány</title>
+<style>
+  :root{ --paper:#f1efe7; }
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    margin:0;
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    color:#111;
+    background:var(--paper);
+    overflow:hidden;
+  }
+  a{color:inherit;}
+  img{display:block; max-width:100%;}
+
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:20;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:22px 32px;
+    mix-blend-mode:difference;
+    color:#fff;
+    font-size:13px;
+  }
+  .wordmark{font-weight:700; letter-spacing:.03em;}
+  nav{display:flex; gap:24px;}
+  nav a{text-decoration:none; opacity:.8;}
+  nav a:hover{opacity:1;}
+  .counter{font-variant-numeric:tabular-nums; letter-spacing:.05em;}
+
+  .note{
+    position:fixed; top:70px; left:32px; z-index:20;
+    max-width:300px;
+    font-size:11px;
+    color:#fff;
+    mix-blend-mode:difference;
+    line-height:1.5;
+  }
+
+  .stage{ position:relative; width:100%; height:100%; }
+  .slide{
+    position:absolute; inset:0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    opacity:0;
+    transform:scale(1.015);
+    transition:opacity .6s ease, transform .8s ease;
+    pointer-events:none;
+  }
+  .slide.active{opacity:1; transform:scale(1); pointer-events:auto; z-index:1;}
+  .slide.flip{grid-template-columns:1fr 1fr; direction:rtl;}
+  .slide.flip > *{direction:ltr;}
+
+  .media{
+    position:relative;
+    display:flex; align-items:center; justify-content:center;
+    padding:110px 60px 100px;
+    overflow:hidden;
+  }
+  .media .frame{
+    position:relative;
+    max-width:86%;
+    max-height:78%;
+    box-shadow:0 30px 70px rgba(0,0,0,.35);
+    background:#fff;
+    padding:10px;
+  }
+  .media .frame img{ max-height:56vh; width:auto; max-width:100%; display:block; }
+  .media .logo-frame{
+    background:#fff;
+    padding:36px 44px;
+    box-shadow:0 30px 70px rgba(0,0,0,.3);
+  }
+  .media .logo-frame img{ max-height:14vh; max-width:60vh; }
+
+  .numeral-fallback{
+    font-size:min(46vw, 46vh);
+    font-weight:800;
+    line-height:1;
+    opacity:.16;
+    user-select:none;
+  }
+
+  .covers-strip{
+    position:absolute; left:60px; right:60px; bottom:36px;
+    display:flex; gap:8px; justify-content:center;
+  }
+  .covers-strip img{
+    height:80px; width:auto;
+    box-shadow:0 10px 18px rgba(0,0,0,.35);
+    border:3px solid #fff;
+  }
+
+  .text{
+    position:relative; z-index:1;
+    display:flex; flex-direction:column; justify-content:flex-end;
+    padding:110px 56px 100px 40px;
+  }
+  .text .idx{
+    font-size:13px; font-weight:700; letter-spacing:.1em;
+    margin-bottom:14px; display:inline-block;
+    border-top:1px solid currentColor; padding-top:8px;
+    width:fit-content;
+  }
+  .text h2{
+    font-size:clamp(30px, 4.2vw, 58px);
+    line-height:1.02; margin:0 0 16px; font-weight:800; letter-spacing:-.01em;
+  }
+  .text p{ font-size:15.5px; max-width:46ch; margin:0 0 10px; opacity:.9; }
+  .text .meta{
+    font-size:12.5px; opacity:.75; margin-top:10px; line-height:1.6;
+    border-top:1px solid currentColor; padding-top:10px; max-width:46ch;
+  }
+  .text .eu-badge{ margin-top:18px; max-width:260px; opacity:.9; }
+  .text .eu-badge img{ width:100%; height:auto; }
+
+  /* per-slide identity */
+  .s1{background:#eee7d4; color:#161310;}
+  .s2{background:#1c3d3a; color:#f1efe7;}
+  .s3{background:#d8cdb8; color:#111;}
+  .s4{background:#8a1f2b; color:#f1efe7;}
+  .s5{background:#2b3f70; color:#f1efe7;}
+  .s6{background:#4c6b4f; color:#f1efe7;}
+  .s7{background:#a63b2e; color:#f1efe7;}
+  .s8{background:#20242b; color:#f1efe7;}
+  .s9{background:#7a5a97; color:#f1efe7;}
+  .s10{background:#e0a92e; color:#111;}
+  .s11{background:#171717; color:#f1efe7;}
+  .s12{background:#5c4632; color:#f1efe7;}
+
+  .arrow{
+    position:absolute; top:0; bottom:0; width:12%; z-index:15;
+    background:transparent; border:none; cursor:pointer;
+    display:flex; align-items:center; color:inherit;
+    mix-blend-mode:difference;
+  }
+  .arrow svg{width:22px; height:22px; opacity:0; transition:opacity .2s; filter:invert(1);}
+  .stage:hover .arrow svg{opacity:.9;}
+  .arrow.prev{left:0; justify-content:flex-start; padding-left:20px;}
+  .arrow.next{right:0; justify-content:flex-end; padding-right:20px;}
+
+  .filmstrip{
+    position:fixed; bottom:0; left:0; right:0; z-index:20;
+    display:flex; gap:1px; background:#000; height:64px; overflow-x:auto;
+  }
+  .filmstrip button{
+    flex:1 0 90px; border:none; cursor:pointer;
+    display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
+    padding:0 12px; font-family:inherit; font-size:10px; letter-spacing:.04em;
+    color:#fff; opacity:.5; position:relative; text-align:left;
+    background-size:cover; background-position:center;
+  }
+  .filmstrip button::after{
+    content:""; position:absolute; inset:0; background:rgba(0,0,0,.55);
+  }
+  .filmstrip button span, .filmstrip button b{position:relative; z-index:1;}
+  .filmstrip button b{font-size:12px; display:block; margin-top:2px; font-weight:600;}
+  .filmstrip button.active{opacity:1;}
+  .filmstrip button.active::before{
+    content:""; position:absolute; top:0; left:0; right:0; height:2px; background:#fff; z-index:2;
+  }
+  .filmstrip button:hover{opacity:1;}
+
+  .progress{
+    position:fixed; left:0; right:0; bottom:64px; height:2px; z-index:21;
+    background:rgba(255,255,255,.2);
+  }
+  .progress i{ display:block; height:100%; background:#fff; width:calc(100% / 12); transition:transform .4s ease; }
+
+  @media (max-width:900px){
+    .slide, .slide.flip{ grid-template-columns:1fr; grid-template-rows:1fr 1fr; }
+    .text{padding:20px 28px 20px;}
+    .media{padding:70px 28px 10px;}
+    header, .note{display:none;}
+    .filmstrip button b{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wordmark">I.T.E.M. Alapítvány</div>
+  <nav><a href="#">Rólunk</a><a href="#">Galéria</a><a href="#">Kapcsolat</a></nav>
+  <div class="counter"><span id="cur">01</span> / 12</div>
+</header>
+
+<div class="note">Ugyanaz a szerkezet, most a mentésből előkerült valódi borítókkal, logókkal és eredeti szövegekkel. Ahol nincs kép (Wayback nem mentette), egy nagy iniciálé jelzi a helyét.</div>
+
+<div class="stage" id="stage">
+
+  <!-- 1: Kijárat Kiadó -->
+  <div class="slide s1 active">
+    <div class="media">
+      <div class="frame"><img src="../site/wp-content/uploads/2024/03/SZEMES_borito_print_VEGLEGES_kivagva-scaled-e1710838483612.jpg" alt="Kijárat Kiadó — kötetborító"></div>
+      <div class="covers-strip">
+        <img src="../site/wp-content/uploads/2024/03/agamben-198x300.jpg" alt="">
+        <img src="../site/wp-content/uploads/2024/03/lovecraft-209x300.jpg" alt="">
+        <img src="../site/wp-content/uploads/2024/03/marjanovics-215x300.jpg" alt="">
+        <img src="../site/wp-content/uploads/2024/03/tanos-214x300.jpg" alt="">
+        <img src="../site/wp-content/uploads/2024/03/ureczky-212x300.jpg" alt="">
+        <img src="../site/wp-content/uploads/2024/03/vörös-215x300.jpg" alt="">
+      </div>
+    </div>
+    <div class="text">
+      <div class="idx">01 — Kiadvány</div>
+      <h2>Kijárat Kiadó</h2>
+      <p>2020-ban közös könyvsorozatot indítottunk a Kijárat Kiadóval. A kötetek tudományos igénnyel, ugyanakkor közérthető formában írják le a digitalizálódó mindennapjainkat és kulturális gyakorlatainkat.</p>
+      <div class="meta">Szerzők: Horváth Márk, Lovász Ádám, Neme Z. Márió</div>
+    </div>
+  </div>
+
+  <!-- 2: A határsértés technológiái -->
+  <div class="slide s2 flip">
+    <div class="media">
+      <div class="frame"><img src="../site/wp-content/uploads/2020/07/hatar_vegleges_kontrasztos.jpg" alt="A határsértés technológiái — borító"></div>
+    </div>
+    <div class="text">
+      <div class="idx">02 — Kötet · 2021</div>
+      <h2>A határsértés technológiái</h2>
+      <p>A Kijárat Kiadóval közös sorozat második kötete, a digitális kultúra és a normaszegés technológiai vonatkozásairól.</p>
+      <div class="meta">Szerző: Horváth Márk, Lovász Ádám<br>Megjelenés: 2021</div>
+    </div>
+  </div>
+
+  <!-- 3: Hibrid gondolkodás -->
+  <div class="slide s3">
+    <div class="media">
+      <div class="frame"><img src="../site/wp-content/uploads/2020/07/latour_1.jpg" alt="Hibrid gondolkodás — Bruno Latour"></div>
+    </div>
+    <div class="text">
+      <div class="idx">03 — Kötet · 2021</div>
+      <h2>Hibrid gondolkodás</h2>
+      <p>Bruno Latour írásainak magyar fordítása a sorozat részeként — a modernitás, a technológia és a hibrid entitások viszonyáról.</p>
+      <div class="meta">Szerző: Bruno Latour<br>Fordító: Keresztes Balázs · Megjelenés: 2021</div>
+    </div>
+  </div>
+
+  <!-- 4: Transzmédia -->
+  <div class="slide s4 flip">
+    <div class="media">
+      <div class="frame"><img src="../site/wp-content/uploads/2020/07/transzmediajav.jpg" alt="Transzmédia — borító"></div>
+    </div>
+    <div class="text">
+      <div class="idx">04 — Kötet · 2021</div>
+      <h2>Transzmédia</h2>
+      <p>Tanulmánygyűjtemény a transzmediális elbeszélésmódokról és a médiumok közötti átjárásokról.</p>
+      <div class="meta">Szerkesztő: Gregor Lilla, Fejes Richárd<br>Megjelenés: 2021</div>
+    </div>
+  </div>
+
+  <!-- 5: Computational Stylistic Group -->
+  <div class="slide s5">
+    <div class="media">
+      <div class="frame logo-frame"><img src="../site/wp-content/uploads/2021/11/egyben.png" alt="Computational Stylistic Group"></div>
+    </div>
+    <div class="text">
+      <div class="idx">05 — Kutatás · 2021</div>
+      <h2>Computational Stylistic Group bemutatása</h2>
+      <p>A Digitális Bölcsészet folyóirat különszáma a Wacław Felczak Alapítvány támogatásával, a krakkói kutatócsoport munkásságáról — nemzetközileg elismert műhely a számítógépes stíluskutatásban, ismert az R nyelvhez írt „stylo” csomagról.</p>
+    </div>
+  </div>
+
+  <!-- 6: Freshfabrik -->
+  <div class="slide s6 flip">
+    <div class="media">
+      <div class="frame logo-frame"><img src="../site/wp-content/uploads/2024/03/ff.png" alt="Freshfabrik logó"></div>
+    </div>
+    <div class="text">
+      <div class="idx">06 — Program · EU</div>
+      <h2>Freshfabrik</h2>
+      <p>KA210-VET — kisléptékű partnerség a szakképzésben. Projektszám: 2022-1-HU01-KA210-VET-000083255.</p>
+      <div class="meta">Futamidő: 2022. december 1. – 2024. május 31.</div>
+      <div class="eu-badge"><img src="../site/wp-content/uploads/2024/09/EN-Co-funded-by-the-EU_POS-1024x215.jpg" alt="Co-funded by the EU"></div>
+    </div>
+  </div>
+
+  <!-- 7: Hangzavart -->
+  <div class="slide s7">
+    <div class="media"><div class="numeral-fallback">H</div></div>
+    <div class="text">
+      <div class="idx">07 — Zene · 2023</div>
+      <h2>Hangzavart?</h2>
+      <p>Non-academic music academy — zenészek gyűlnek össze stílustól és intézményi háttértől függetlenül, hogy tudást cseréljenek és kísérletezzenek. 2023-ban a művészi autonómia kérdését járták körül.</p>
+      <div class="meta">21–30/06/2023 · Zebegény, Hungary</div>
+      <div class="eu-badge"><img src="../site/wp-content/uploads/2024/03/EN-Co-Funded-by-the-EU_BLACK-Outline-1024x215.png" alt="Co-funded by the EU"></div>
+    </div>
+  </div>
+
+  <!-- 8: Neurodiverz.xyz -->
+  <div class="slide s8 flip">
+    <div class="media">
+      <div class="frame logo-frame"><img src="../site/wp-content/uploads/2024/03/neurodiverz_logo_honlap-kek_nincs-space.png" alt="neurodiverz.xyz logó"></div>
+    </div>
+    <div class="text">
+      <div class="idx">08 — Program</div>
+      <h2>neurodiverz.xyz</h2>
+      <p>Fiatal felnőttek által kezdeményezett projekt, mely neurodiverz fiatalokból álló, 25 fős csapatot hozott össze, hogy közös tudás- és tapasztalatcsere révén ismeretterjesztő weboldalt építsenek.</p>
+      <div class="eu-badge"><img src="../site/wp-content/uploads/2024/03/EN-Co-Funded-by-the-EU_BLACK-Outline-1024x215.png" alt="Co-funded by the EU"></div>
+    </div>
+  </div>
+
+  <!-- 9: Holy Week -->
+  <div class="slide s9">
+    <div class="media"><div class="numeral-fallback">H</div></div>
+    <div class="text">
+      <div class="idx">09 — Program · 2025</div>
+      <h2>Holy Week</h2>
+      <p>A PAIKKA nyolc alkotót fogad 2025-ben — etnomuzikológusok, előadóművészek és képzőművészek sokszínű csoportja Európából, Ázsiából és a Közel-Keletről.</p>
+    </div>
+  </div>
+
+  <!-- 10: Mészöly 100 -->
+  <div class="slide s10 flip">
+    <div class="media"><div class="numeral-fallback">M</div></div>
+    <div class="text">
+      <div class="idx">10 — Program</div>
+      <h2>Mészöly 100</h2>
+      <p>„Egy másik kameraállásból…” — felhívás projektmunka készítésére középiskolák 9–12. osztályos diákjai számára, Mészöly Miklós emlékére.</p>
+    </div>
+  </div>
+
+  <!-- 11: Hibiki -->
+  <div class="slide s11">
+    <div class="media">
+      <div class="frame logo-frame"><img src="../site/wp-content/uploads/2020/07/Hibiki-Logo-Kicsi.png" alt="Hibiki logó"></div>
+    </div>
+    <div class="text">
+      <div class="idx">11 — Folyóirat</div>
+      <h2>Hibiki</h2>
+      <p>A HIBIKI japanisztikai folyóirat küldetése, hogy magyar nyelven, közérthető formában, hiteles információt nyújtson a japán kultúráról, és aktív közösséget építsen a téma iránt érdeklődők köré.</p>
+    </div>
+  </div>
+
+  <!-- 12: Kelemen Patrik -->
+  <div class="slide s12 flip">
+    <div class="media"><div class="numeral-fallback">K</div></div>
+    <div class="text">
+      <div class="idx">12 — Művész</div>
+      <h2>Kelemen Patrik</h2>
+      <p>Kelemen Patrik (1992, Budapest) Budapesten élő táncművész és színházi alkotó — főként a tánc- és performanszművészet területén aktív, gyakran interdiszciplináris közegben. Tanulmányait Budapesten, Salzburgban és Brüsszelben végezte.</p>
+    </div>
+  </div>
+
+  <button class="arrow prev" aria-label="Előző">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button class="arrow next" aria-label="Következő">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+</div>
+
+<div class="progress"><i id="progressBar"></i></div>
+
+<div class="filmstrip" id="filmstrip">
+  <button data-i="0" class="active" style="background-image:url(../site/wp-content/uploads/2024/03/SZEMES_borito_print_VEGLEGES_kivagva-211x300.jpg)"><span>01</span><b>Kijárat Kiadó</b></button>
+  <button data-i="1" style="background-image:url(../site/wp-content/uploads/2020/07/hatar_vegleges_kontrasztos-214x300.jpg)"><span>02</span><b>Határsértés</b></button>
+  <button data-i="2" style="background-image:url(../site/wp-content/uploads/2020/07/latour_1-214x300.jpg)"><span>03</span><b>Hibrid gond.</b></button>
+  <button data-i="3" style="background-image:url(../site/wp-content/uploads/2020/07/transzmediajav-214x300.jpg)"><span>04</span><b>Transzmédia</b></button>
+  <button data-i="4"><span>05</span><b>CSG</b></button>
+  <button data-i="5"><span>06</span><b>Freshfabrik</b></button>
+  <button data-i="6"><span>07</span><b>Hangzavart</b></button>
+  <button data-i="7"><span>08</span><b>Neurodiverz</b></button>
+  <button data-i="8"><span>09</span><b>Holy Week</b></button>
+  <button data-i="9"><span>10</span><b>Mészöly 100</b></button>
+  <button data-i="10"><span>11</span><b>Hibiki</b></button>
+  <button data-i="11"><span>12</span><b>Kelemen P.</b></button>
+</div>
+
+<script>
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const filmBtns = Array.from(document.querySelectorAll('.filmstrip button'));
+  const cur = document.getElementById('cur');
+  const bar = document.getElementById('progressBar');
+  let active = 0;
+
+  function goTo(i){
+    active = (i + slides.length) % slides.length;
+    slides.forEach((s, n) => s.classList.toggle('active', n === active));
+    filmBtns.forEach((b, n) => b.classList.toggle('active', n === active));
+    cur.textContent = String(active + 1).padStart(2, '0');
+    bar.style.transform = `translateX(${active * 100}%)`;
+    filmBtns[active].scrollIntoView({inline:'center', block:'nearest', behavior:'smooth'});
+  }
+
+  document.querySelector('.arrow.prev').addEventListener('click', () => goTo(active - 1));
+  document.querySelector('.arrow.next').addEventListener('click', () => goTo(active + 1));
+  filmBtns.forEach(b => b.addEventListener('click', () => goTo(Number(b.dataset.i))));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') goTo(active + 1);
+    if (e.key === 'ArrowLeft') goTo(active - 1);
+  });
+
+  goTo(0);
+</script>
+
+</body>
+</html>

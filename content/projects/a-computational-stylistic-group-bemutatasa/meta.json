@@ -1,0 +1,69 @@
+{
+  "order": 6,
+  "type": "journal",
+  "years": [
+    2021,
+    2022
+  ],
+  "ongoing": false,
+  "status": "archived",
+  "color": "#1a6f96",
+  "source_lang": "hu",
+  "title": {
+    "hu": "A Computational Stylistics Group bemutatása",
+    "en": "Introducing the Computational Stylistics Group"
+  },
+  "summary": {
+    "hu": "A Digitális Bölcsészet folyóirat különszáma és stilometriai workshop a krakkói Computational Stylistics Group munkásságáról.",
+    "en": "A special issue of the journal Digitális Bölcsészet and a stylometry workshop on the work of the Kraków-based Computational Stylistics Group."
+  },
+  "place": {
+    "hu": "ELTE BTK, Budapest",
+    "en": "ELTE Faculty of Humanities, Budapest"
+  },
+  "dates": null,
+  "people": [
+    {
+      "role": {
+        "hu": "A különszám szerkesztője",
+        "en": "Editor of the special issue"
+      },
+      "names": [
+        "Szemes Botond"
+      ]
+    }
+  ],
+  "partners": [
+    {
+      "name": "Digitális Bölcsészet",
+      "url": "http://ojs.elte.hu/digitalisbolcseszet"
+    },
+    {
+      "name": "Computational Stylistics Group",
+      "url": "https://computationalstylistics.github.io/"
+    }
+  ],
+  "funding": [
+    {
+      "funder": "felczak",
+      "reference": null
+    }
+  ],
+  "facts": [],
+  "links": [
+    {
+      "label": {
+        "hu": "A lapszám teljes tartalma",
+        "en": "Full issue (in Hungarian)"
+      },
+      "url": "http://ojs.elte.hu/digitalisbolcseszet/issue/view/272"
+    }
+  ],
+  "role": null,
+  "cover": null,
+  "logo": "logo.png",
+  "proofread": {
+    "hu": false,
+    "en": false
+  }
+}

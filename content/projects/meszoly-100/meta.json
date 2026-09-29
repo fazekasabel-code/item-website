@@ -1,0 +1,50 @@
+{
+  "order": 7,
+  "type": "education",
+  "years": [
+    2021
+  ],
+  "ongoing": false,
+  "status": "archived",
+  "color": null,
+  "source_lang": "hu",
+  "title": {
+    "hu": "Mészöly 100",
+    "en": "Mészöly 100"
+  },
+  "summary": {
+    "hu": "„Egy másik kameraállásból…” – némafilmes projektmunka-felhívás középiskolásoknak Mészöly Miklós születésének centenáriumán.",
+    "en": "“From another camera angle…” – a silent-film project call for secondary-school students on the centenary of Miklós Mészöly’s birth."
+  },
+  "place": null,
+  "dates": {
+    "hu": "Beküldési határidő: 2021. szeptember 30.",
+    "en": "Submission deadline: 30 September 2021"
+  },
+  "people": [
+    {
+      "role": {
+        "hu": "Zsűri",
+        "en": "Jury"
+      },
+      "names": [
+        "Kis Hajni",
+        "Pozsonyi Janka",
+        "Osztroluczky Sarolta",
+        "Rédai Gergely",
+        "Szemes Botond"
+      ]
+    }
+  ],
+  "partners": [],
+  "funding": [],
+  "facts": [],
+  "links": [],
+  "role": null,
+  "cover": null,
+  "logo": null,
+  "proofread": {
+    "hu": false,
+    "en": false
+  }
+}

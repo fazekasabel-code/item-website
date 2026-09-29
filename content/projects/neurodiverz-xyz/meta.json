@@ -1,0 +1,39 @@
+{
+  "order": 5,
+  "type": "youth",
+  "years": [
+    2022,
+    2023
+  ],
+  "ongoing": false,
+  "status": "archived",
+  "color": "#3a1ff5",
+  "source_lang": "hu",
+  "title": {
+    "hu": "neurodiverz.xyz",
+    "en": "neurodiverz.xyz"
+  },
+  "summary": {
+    "hu": "Fiatal felnőttek által kezdeményezett projekt: egy 25 fős neurodiverz csapat ismeretterjesztő weboldalt épített a későn vagy soha nem diagnosztizált társaiknak.",
+    "en": "A project initiated by young adults: a team of 25 neurodivergent people built an information website for peers diagnosed late or never."
+  },
+  "place": null,
+  "dates": null,
+  "people": [],
+  "partners": [],
+  "funding": [
+    {
+      "funder": "eu",
+      "reference": null
+    }
+  ],
+  "facts": [],
+  "links": [],
+  "role": null,
+  "cover": null,
+  "logo": "logo.png",
+  "proofread": {
+    "hu": false,
+    "en": false
+  }
+}

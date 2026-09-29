@@ -1,0 +1,69 @@
+{
+  "nav.projects":      { "hu": "Projektek", "en": "Projects" },
+  "nav.kijarat":       { "hu": "Kijárat", "en": "Kijárat" },
+  "nav.about":         { "hu": "Rólunk", "en": "About" },
+  "nav.contact":       { "hu": "Kapcsolat", "en": "Contact" },
+  "nav.switch":        { "hu": "EN", "en": "HU" },
+  "nav.switch_label":  { "hu": "English version", "en": "Magyar változat" },
+  "skip":              { "hu": "Ugrás a tartalomra", "en": "Skip to content" },
+
+  "home.current":      { "hu": "Aktuális", "en": "Current" },
+  "home.index":        { "hu": "Minden projekt", "en": "All projects" },
+  "home.books":        { "hu": "Kijárat könyvsorozat", "en": "Kijárat book series" },
+  "home.books_more":   { "hu": "Mind a(z) {n} kötet", "en": "All {n} volumes" },
+
+  "col.year":          { "hu": "Év", "en": "Year" },
+  "col.title":         { "hu": "Projekt", "en": "Project" },
+  "col.type":          { "hu": "Típus", "en": "Type" },
+
+  "type.book-series":     { "hu": "Könyvsorozat", "en": "Book series" },
+  "type.journal":         { "hu": "Folyóirat", "en": "Journal" },
+  "type.academy":         { "hu": "Zenei akadémia", "en": "Music academy" },
+  "type.residency":       { "hu": "Rezidencia és turné", "en": "Residency and tour" },
+  "type.youth":           { "hu": "Ifjúsági projekt", "en": "Youth project" },
+  "type.education":       { "hu": "Diákpályázat", "en": "Student competition" },
+  "type.vet-partnership": { "hu": "Erasmus+ partnerség", "en": "Erasmus+ partnership" },
+
+  "role.partner":      { "hu": "Az Alapítvány partnerként vesz részt a projektben.", "en": "The Foundation is a partner of this project." },
+
+  "fact.years":        { "hu": "Időszak", "en": "Period" },
+  "fact.dates":        { "hu": "Időpont", "en": "Dates" },
+  "fact.place":        { "hu": "Helyszín", "en": "Place" },
+  "fact.type":         { "hu": "Típus", "en": "Type" },
+  "fact.partners":     { "hu": "Partnerek", "en": "Partners" },
+  "fact.links":        { "hu": "Linkek", "en": "Links" },
+  "fact.reference":    { "hu": "Projektszám", "en": "Reference number" },
+  "fact.programme":    { "hu": "Program", "en": "Programme" },
+  "fact.action":       { "hu": "Pályázati típus", "en": "Action type" },
+  "fact.ongoing":      { "hu": "folyamatban", "en": "ongoing" },
+
+  "section.funding":   { "hu": "Támogatók", "en": "Funding" },
+  "section.books":     { "hu": "Köteteink", "en": "Our volumes" },
+  "section.gallery":   { "hu": "Képek", "en": "Images" },
+  "nav.prev":          { "hu": "Előző projekt", "en": "Previous project" },
+  "nav.next":          { "hu": "Következő projekt", "en": "Next project" },
+
+  "book.author":       { "hu": "Szerző", "en": "Author" },
+  "book.translator":   { "hu": "Fordító", "en": "Translated by" },
+  "book.editor":       { "hu": "Szerkesztő", "en": "Edited by" },
+  "book.year":         { "hu": "Megjelenés", "en": "Published" },
+  "book.isbn":         { "hu": "ISBN", "en": "ISBN" },
+  "book.shop":         { "hu": "Megvásárolható a Kijárat Kiadónál", "en": "Available from Kijárat Kiadó" },
+  "book.hu_only":      { "hu": "", "en": "Published in Hungarian." },
+
+  "footer.reg":        { "hu": "Nyilvántartási szám", "en": "Registration no." },
+  "footer.tax":        { "hu": "Adószám", "en": "Tax no." },
+  "footer.public_benefit": { "hu": "Közhasznú szervezet", "en": "Public-benefit organisation" },
+
+  "contact.email":     { "hu": "E-mail", "en": "Email" },
+  "contact.address":   { "hu": "Cím", "en": "Address" },
+  "contact.legal":     { "hu": "Hivatalos adatok", "en": "Legal details" },
+  "contact.court":     { "hu": "Nyilvántartó bíróság", "en": "Registering court" },
+  "contact.board":     { "hu": "Kuratórium", "en": "Board of trustees" },
+
+  "404.title":         { "hu": "Az oldal nem található", "en": "Page not found" },
+  "404.text":          { "hu": "Ez az oldal nem létezik, vagy elköltözött.", "en": "This page does not exist or has moved." },
+  "404.home":          { "hu": "Vissza a kezdőlapra", "en": "Back to the home page" },
+  "redirect.text":     { "hu": "Az oldal új helyre költözött:", "en": "This page has moved to:" },
+  "fallback.notice":   { "hu": "Ez a szöveg még nem készült el magyarul.", "en": "This text is not yet available in English." }
+}

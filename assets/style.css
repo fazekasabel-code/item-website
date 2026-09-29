@@ -1,0 +1,29 @@
+/* Baseline (unstyled) stylesheet – structure only. Design directions replace this file. */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0 auto; max-width: 72rem; padding: 0 16px; font: 16px/1.5 system-ui, sans-serif; background: #fff; color: #111; }
+img { max-width: 100%; height: auto; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip-link { position: absolute; left: -999px; }
+.skip-link:focus { left: 16px; top: 8px; background: #fff; padding: 4px 8px; }
+.site-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 0; }
+.site-header__logo { width: 160px; height: auto; }
+.site-nav, .site-nav__list { display: flex; flex-wrap: wrap; gap: 16px; list-style: none; margin: 0; padding: 0; }
+.project-index__list, .current-projects__list, .book-strip__list, .books__list { list-style: none; padding: 0; }
+.project-row__link { display: grid; grid-template-columns: 3em 1fr auto auto; gap: 12px; padding: 8px 0; border-top: 1px solid #ddd; }
+.project-row__summary { grid-column: 2 / -1; color: #555; }
+.book-strip__list { display: flex; gap: 12px; overflow-x: auto; }
+.book-strip__cover { height: 160px; width: auto; }
+.books__list { display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: 24px; }
+.project-hero__frame img { max-height: 320px; width: auto; }
+.typo-cover { aspect-ratio: 2 / 3; max-width: 14rem; display: flex; flex-direction: column; justify-content: space-between; padding: 1rem; background: var(--cover-color, #ddd); color: #111; }
+.typo-cover__title { font-weight: 700; font-size: 1.25rem; }
+.project-layout { display: grid; gap: 24px; }
+@media (min-width: 48rem) { .project-layout { grid-template-columns: 16rem 1fr; } }
+.facts__item dt { font-size: .8rem; color: #555; }
+.facts__item dd { margin: 0 0 12px; }
+.facts__list { list-style: none; padding: 0; margin: 0; }
+.funder__logo { max-height: 60px; width: auto; }
+.fallback-notice { font-size: .85rem; color: #a33; }
+.site-footer { border-top: 1px solid #ddd; margin-top: 48px; padding: 24px 0; font-size: .9rem; }
+.site-footer__legal div { display: flex; gap: 8px; }
+.site-footer__legal dd { margin: 0; }

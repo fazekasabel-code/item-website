@@ -1,0 +1,72 @@
+{
+  "base_path": "",
+  "domain": "https://itemalapitvany.hu",
+  "name": {
+    "hu": "I.T.E.M. Kulturális és Oktatási Alapítvány",
+    "en": "I.T.E.M. Kulturális és Oktatási Alapítvány"
+  },
+  "name_gloss": { "hu": "", "en": "I.T.E.M. Cultural and Educational Foundation" },
+  "short": { "hu": "I.T.E.M. Alapítvány", "en": "I.T.E.M. Foundation" },
+  "tagline": {
+    "hu": "Kulturális és oktatási ernyőszervezet Budapesten, 2020 óta.",
+    "en": "A cultural and educational umbrella organisation in Budapest, since 2020."
+  },
+  "intro": {
+    "hu": "Összekötő kapocs az oktatás és a tudomány világa, valamint az alulról jövő kulturális és oktatási kezdeményezések között: könyvsorozat, folyóiratok, művészeti akadémia, rezidencia és ifjúsági programok.",
+    "en": "A link between education and research on the one hand and grassroots cultural and educational initiatives on the other: a book series, journals, an art academy, a residency and youth programmes."
+  },
+  "founded": 2020,
+  "address": {
+    "hu": "1068 Budapest, Király utca 112. 2. em. 6a",
+    "en": "Király utca 112, 2nd floor 6a, 1068 Budapest, Hungary"
+  },
+  "email": "info@itemalapitvany.hu",
+  "legal": {
+    "registration_no": "01-01-0012935",
+    "court": { "hu": "Fővárosi Törvényszék", "en": "Budapest-Capital Regional Court" },
+    "tax_no": "19250409-1-42",
+    "eu_vat": "HU19250409",
+    "public_benefit_since": "2023-06-02"
+  },
+  "board": ["Bódi Zsuzsanna", "Szemes Botond Bálint", "Fazekas Ábel"],
+  "funders": {
+    "eu": {
+      "logo": "funders/eu-cofunded-en-black.png",
+      "logo_dark": null,
+      "name": { "hu": "Európai Unió", "en": "European Union" },
+      "statement": {
+        "hu": "A projekt az Európai Unió társfinanszírozásával valósult meg.",
+        "en": "The project was co-funded by the European Union."
+      }
+    },
+    "eu-erasmus": {
+      "logo": "funders/eu-cofunded-en-pos.jpg",
+      "logo_dark": null,
+      "name": { "hu": "Európai Unió – Erasmus+", "en": "European Union – Erasmus+" },
+      "statement": {
+        "hu": "Az Európai Unió finanszírozásával. Az itt szereplő információk és állítások a szerző(k) álláspontját tükrözik, és nem feltétlenül egyeznek meg az Európai Unió vagy az Európai Oktatási és Kulturális Végrehajtó Ügynökség (EACEA) hivatalos álláspontjával. Sem az Európai Unió, sem az EACEA nem vonható felelősségre miattuk.",
+        "en": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them."
+      }
+    },
+    "visegrad": {
+      "logo": "funders/visegrad-black.png",
+      "logo_dark": "funders/visegrad-white.png",
+      "url": "https://www.visegradfund.org",
+      "name": { "hu": "Nemzetközi Visegrádi Alap", "en": "International Visegrad Fund" },
+      "statement": {
+        "hu": "A projekt Csehország, Lengyelország, Magyarország és Szlovákia kormányainak társfinanszírozásával, a Nemzetközi Visegrádi Alap Visegrádi Támogatásai révén valósult meg. Az Alap küldetése a fenntartható közép-európai regionális együttműködést szolgáló gondolatok előmozdítása.",
+        "en": "The project is co-financed by the governments of Czechia, Hungary, Poland and Slovakia through Visegrad Grants from the International Visegrad Fund. The mission of the fund is to advance ideas for sustainable regional cooperation in Central Europe."
+      }
+    },
+    "felczak": {
+      "logo": null,
+      "logo_dark": null,
+      "url": null,
+      "name": { "hu": "Wacław Felczak Alapítvány", "en": "Wacław Felczak Foundation" },
+      "statement": {
+        "hu": "A projekt a Wacław Felczak Alapítvány támogatásával valósult meg.",
+        "en": "The project was supported by the Wacław Felczak Foundation."
+      }
+    }
+  }
+}

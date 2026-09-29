@@ -1,0 +1,118 @@
+{
+  "order": 2,
+  "type": "residency",
+  "years": [
+    2025
+  ],
+  "ongoing": false,
+  "status": "archived",
+  "color": null,
+  "source_lang": "en",
+  "title": {
+    "hu": "HOLY WEEK",
+    "en": "HOLY WEEK"
+  },
+  "summary": {
+    "hu": "Nyolc nemzetközi alkotó egyhetes rezidenciája és négy országot érintő, részvételi performansz-turnéja a közép-európai húsvéti hagyományokról.",
+    "en": "A week-long residency of eight international creators and a participatory performance tour through four countries on Central European Easter traditions."
+  },
+  "place": {
+    "hu": "Lublin · Brno · Pozsony · Budapest",
+    "en": "Lublin · Brno · Bratislava · Budapest"
+  },
+  "dates": {
+    "hu": "2025. április 13–17.",
+    "en": "13–17 April 2025"
+  },
+  "people": [
+    {
+      "role": {
+        "hu": "Alkotók",
+        "en": "Creators"
+      },
+      "names": [
+        "Jana Ambrózová",
+        "Jeries AbuJaber",
+        "Bartus Csilla",
+        "Magdalena Franczak",
+        "Kasha Potrohosh",
+        "Maciej Polynko",
+        "Yu En-Ping"
+      ]
+    },
+    {
+      "role": {
+        "hu": "Facilitátor",
+        "en": "Facilitator"
+      },
+      "names": [
+        "Béres Bíborka"
+      ]
+    },
+    {
+      "role": {
+        "hu": "Koordináció",
+        "en": "Coordination"
+      },
+      "names": [
+        "Sanna Bo"
+      ]
+    },
+    {
+      "role": {
+        "hu": "Grafika",
+        "en": "Graphic design"
+      },
+      "names": [
+        "Kophelyi Dániel"
+      ]
+    },
+    {
+      "role": {
+        "hu": "Fotó",
+        "en": "Photography"
+      },
+      "names": [
+        "Jacek Świerczyński",
+        "Simon Lupták"
+      ]
+    }
+  ],
+  "partners": [
+    {
+      "name": "Združenie OOO",
+      "url": "https://zdruzenie.ooo/en/"
+    },
+    {
+      "name": "Cross Attic",
+      "url": "https://www.facebook.com/CrossAttic/"
+    },
+    {
+      "name": "Dzielnicowy Dom Kultury „Węglin”",
+      "url": "https://ddkweglin.pl/"
+    }
+  ],
+  "funding": [
+    {
+      "funder": "visegrad",
+      "reference": null
+    }
+  ],
+  "facts": [],
+  "links": [
+    {
+      "label": {
+        "hu": "PAIKKA",
+        "en": "PAIKKA"
+      },
+      "url": "https://paikkaxyz.wordpress.com/holy-week/"
+    }
+  ],
+  "role": null,
+  "cover": null,
+  "logo": null,
+  "proofread": {
+    "hu": false,
+    "en": false
+  }
+}

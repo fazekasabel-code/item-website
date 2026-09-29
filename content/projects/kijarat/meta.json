@@ -1,0 +1,46 @@
+{
+  "order": 1,
+  "type": "book-series",
+  "years": [
+    2020
+  ],
+  "ongoing": true,
+  "status": "current",
+  "color": "#2a8fd4",
+  "source_lang": "hu",
+  "title": {
+    "hu": "Kijárat könyvsorozat",
+    "en": "Kijárat book series"
+  },
+  "summary": {
+    "hu": "A Kijárat Kiadóval 2020-ban indított sorozat kötetei tudományos igénnyel, mégis közérthetően írják le digitalizálódó mindennapjainkat.",
+    "en": "Launched with Kijárat Kiadó in 2020, the series describes our digitalising everyday life in books that are scholarly yet accessible."
+  },
+  "place": null,
+  "dates": null,
+  "people": [],
+  "partners": [
+    {
+      "name": "Kijárat Kiadó",
+      "url": "https://kijarat.hu/"
+    }
+  ],
+  "funding": [],
+  "facts": [],
+  "links": [
+    {
+      "label": {
+        "hu": "Kijárat Kiadó",
+        "en": "Kijárat Kiadó"
+      },
+      "url": "https://kijarat.hu/"
+    }
+  ],
+  "role": null,
+  "cover": null,
+  "logo": "logo.png",
+  "proofread": {
+    "hu": false,
+    "en": false
+  }
+}

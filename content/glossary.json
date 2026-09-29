@@ -1,0 +1,29 @@
+{
+  "_about": "Fixed terminology for HU<->EN translation. Claude reads this before every translation; edit it when a proofreading correction should apply everywhere.",
+  "rules": [
+    "Personal names follow each language's order: HU 'Fazekas Ábel', EN 'Ábel Fazekas'. Exception: names of non-Hungarians keep their own order in both.",
+    "Book titles are never translated in running text. On the EN site show the Hungarian title, with the English gloss (title_en) in italics beneath or in brackets.",
+    "Proper names of organisations, venues and projects stay as they are (Kijárat Kiadó, PAIKKA, HANGZAVART?, Fresh Fabrik, HIBIKI, neurodiverz.xyz).",
+    "Funder statements use the funder's own official wording where one exists; do not paraphrase them.",
+    "Dates: HU '2023. június 21–30.', EN '21–30 June 2023'."
+  ],
+  "terms": [
+    { "hu": "I.T.E.M. Kulturális és Oktatási Alapítvány", "en": "I.T.E.M. Kulturális és Oktatási Alapítvány (I.T.E.M. Cultural and Educational Foundation)", "note": "No registered foreign-language name. First mention on a page: full HU name + gloss; afterwards 'the I.T.E.M. Foundation' / 'the Foundation'." },
+    { "hu": "I.T.E.M. Alapítvány", "en": "I.T.E.M. Foundation" },
+    { "hu": "Alapítvány", "en": "Foundation" },
+    { "hu": "kuratórium", "en": "board of trustees" },
+    { "hu": "ernyőszervezet", "en": "umbrella organisation" },
+    { "hu": "tehetséggondozás", "en": "talent development" },
+    { "hu": "tudományos ismeretterjesztés", "en": "science communication" },
+    { "hu": "kultúraszervezés", "en": "cultural organising" },
+    { "hu": "közhasznú", "en": "public-benefit" },
+    { "hu": "könyvsorozat", "en": "book series" },
+    { "hu": "kötet", "en": "volume" },
+    { "hu": "projektmunka", "en": "project work" },
+    { "hu": "középiskolás", "en": "secondary-school student" },
+    { "hu": "stilometria / számítógépes stíluskutatás", "en": "stylometry / computational stylistics" },
+    { "hu": "Nemzetközi Visegrádi Alap", "en": "International Visegrad Fund" },
+    { "hu": "Európai Unió társfinanszírozásával", "en": "co-funded by the European Union" },
+    { "hu": "British English spelling on the EN site", "en": "organisation, programme, colour" }
+  ]
+}

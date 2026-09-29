@@ -1,0 +1,61 @@
+{
+  "order": 8,
+  "type": "journal",
+  "years": [
+    2020,
+    2023
+  ],
+  "ongoing": false,
+  "status": "archived",
+  "color": "#6fb7b3",
+  "source_lang": "hu",
+  "title": {
+    "hu": "HIBIKI",
+    "en": "HIBIKI"
+  },
+  "summary": {
+    "hu": "Japanisztikai folyóirat, amely magyar nyelven, közérthetően és hitelesen mutatja be a japán kultúrát.",
+    "en": "A Japanese studies journal presenting Japanese culture in Hungarian, reliably and accessibly."
+  },
+  "place": null,
+  "dates": null,
+  "people": [
+    {
+      "role": {
+        "hu": "Felelős szerkesztő",
+        "en": "Editor-in-chief"
+      },
+      "names": [
+        "Varga Lilla"
+      ]
+    }
+  ],
+  "partners": [
+    {
+      "name": "Nihon-Go",
+      "url": null
+    },
+    {
+      "name": "Japan Cuccok",
+      "url": null
+    }
+  ],
+  "funding": [],
+  "facts": [],
+  "links": [
+    {
+      "label": {
+        "hu": "hibiki.hu",
+        "en": "hibiki.hu"
+      },
+      "url": "https://www.hibiki.hu/"
+    }
+  ],
+  "role": "partner",
+  "cover": null,
+  "logo": "logo.png",
+  "proofread": {
+    "hu": false,
+    "en": false
+  }
+}

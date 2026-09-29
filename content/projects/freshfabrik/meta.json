@@ -1,0 +1,101 @@
+{
+  "order": 4,
+  "type": "vet-partnership",
+  "years": [
+    2022,
+    2024
+  ],
+  "ongoing": false,
+  "status": "archived",
+  "color": null,
+  "source_lang": "en",
+  "title": {
+    "hu": "Fresh Fabrik",
+    "en": "Fresh Fabrik"
+  },
+  "summary": {
+    "hu": "Máltai, észt és magyar kulturális szervezetek Erasmus+ partnersége a kulturális és kreatív ágazat új készségigényeire reagálva.",
+    "en": "An Erasmus+ partnership of cultural organisations from Malta, Estonia and Hungary, reacting to new skills needs in the cultural and creative sectors."
+  },
+  "place": null,
+  "dates": {
+    "hu": "2022. december 1. – 2024. május 31.",
+    "en": "1 December 2022 – 31 May 2024"
+  },
+  "people": [],
+  "partners": [
+    {
+      "name": "I.T.E.M. Kulturális és Oktatási Alapítvány (HU)",
+      "url": null
+    },
+    {
+      "name": "De Structura / MTÜ Start Forum (EE)",
+      "url": null
+    },
+    {
+      "name": "Gabriel Caruana Foundation (MT)",
+      "url": null
+    }
+  ],
+  "funding": [
+    {
+      "funder": "eu-erasmus",
+      "reference": "2022-1-HU01-KA210-VET-000083255"
+    }
+  ],
+  "facts": [
+    {
+      "label": {
+        "hu": "Program",
+        "en": "Programme"
+      },
+      "value": {
+        "hu": "Erasmus+",
+        "en": "Erasmus+"
+      }
+    },
+    {
+      "label": {
+        "hu": "Pályázati típus",
+        "en": "Action type"
+      },
+      "value": {
+        "hu": "KA210-VET – Kisléptékű partnerségek a szakképzésben",
+        "en": "KA210-VET – Small-scale partnerships in vocational education and training"
+      }
+    },
+    {
+      "label": {
+        "hu": "Időtartam",
+        "en": "Duration"
+      },
+      "value": {
+        "hu": "18 hónap",
+        "en": "18 months"
+      }
+    }
+  ],
+  "links": [
+    {
+      "label": {
+        "hu": "Facebook",
+        "en": "Facebook"
+      },
+      "url": "https://www.facebook.com/freshfabrikbudapest"
+    },
+    {
+      "label": {
+        "hu": "Instagram",
+        "en": "Instagram"
+      },
+      "url": "https://www.instagram.com/freshfabrik/"
+    }
+  ],
+  "role": null,
+  "cover": null,
+  "logo": "logo.png",
+  "proofread": {
+    "hu": false,
+    "en": false
+  }
+}
