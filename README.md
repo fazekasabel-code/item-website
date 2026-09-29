@@ -37,6 +37,8 @@ Commit the regenerated `docs/` together with the content change. What is in `doc
   if any, run `python3 build.py`, commit.
 - **Add a book:** add an entry to `books.json` (newest first within a year) and its cover to
   `content/covers/`.
+- **Project colour:** run `python3 tools/project_colors.py --write` after adding or changing a logo. It takes
+  the colour from the project's own logo (projects without a coloured logo stay neutral).
 - **Finish a project:** `"status": "archived"`.
 - **Approve a translation:** set `"proofread": {"hu": true, "en": true}` in that `meta.json`.
 - **Rule:** a change to one language is always committed together with the other.

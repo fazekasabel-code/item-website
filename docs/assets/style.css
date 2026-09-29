@@ -129,7 +129,7 @@ h1, h2, h3 { line-height: 1.08; margin: 0; font-weight: 800; letter-spacing: -.0
 /* Project index */
 .project-index { padding: 0 var(--pad) clamp(40px, 6vw, 80px); }
 .project-index__list { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--ink); counter-reset: none; }
-.project-row { --c: var(--project-color, var(--item-mint)); border-bottom: 1px solid var(--line); position: relative; }
+.project-row { --c: var(--project-color, var(--neutral-hero));  /* project brand colour; never the I.T.E.M. palette */ border-bottom: 1px solid var(--line); position: relative; }
 .project-row__link {
   display: grid; grid-template-columns: 2.2rem 1fr auto; gap: 2px 14px; align-items: baseline; padding: 18px 0 18px 14px;
   color: var(--ink); text-decoration: none; position: relative;
@@ -259,11 +259,7 @@ h1, h2, h3 { line-height: 1.08; margin: 0; font-weight: 800; letter-spacing: -.0
 .book__media { display: flex; align-items: flex-end; justify-content: center; aspect-ratio: 2 / 3; }
 .book__cover { max-height: 100%; width: auto; max-width: 100%; box-shadow: 0 14px 28px -10px rgba(0,0,0,.55); }
 .book__media .typo-cover { width: 100%; max-width: none; box-shadow: 0 14px 28px -10px rgba(0,0,0,.55); }
-/* rhythm: books rotate through project blue, I.T.E.M. red, mint and ink */
-.book:nth-child(4n+1) { --cover-color: var(--project-color, #2a8fd4); }
-.book:nth-child(4n+2) { --cover-color: var(--item-red); }
-.book:nth-child(4n+3) { --cover-color: var(--item-mint); }
-.book:nth-child(4n+4) { --cover-color: #1c1d22; }
+/* books without a cover image take the series colour (Kijárat blue) */
 .book__title { font-size: 1.15rem; font-weight: 800; line-height: 1.15; }
 .book__subtitle { margin: -8px 0 0; font-size: .92rem; color: var(--ink-2); line-height: 1.4; }
 .book__gloss { margin: -8px 0 0; font-size: .85rem; font-style: italic; color: var(--ink-2); }
