@@ -21,6 +21,15 @@ Changes made to the text recovered from the old site (2026-09-29), so they can b
 - Holy Week: rewritten in the past tense from the partner sites (tour dates, creators, credits) and states
   that PAIKKA is run by the I.T.E.M. Foundation.
 
+**Hangzavart (updated 2026-09-30 from hangzavart.com, EN and HU versions)**
+- No longer a one-off 2023 project: an ongoing network since 2021 (`status: current`, years 2021–).
+  The page now describes the academy, the 2022 course (Göd, temperament) and the 2023 course
+  (Zebegény, autonomy), with mentors and partners for each. János Bali mentions "all three courses",
+  but only 2022 and 2023 are documented on hangzavart.com, so 2021 appears only as the start of the network.
+- The HU text follows the wording of hangzavart.com/hu. That site's 2023 HU page has two typos
+  ("2022-es nyári tábora", "4 zenészt"); the correct figures (2023, 24) are used here.
+- Funding shown as the generic EU co-funding statement plus "Programme: Erasmus+"; no project numbers are published.
+
 **Not carried over**
 - Fresh Fabrik publication PDF (never recovered). The link will be added back if the file turns up.
 - Kelemen Patrik page (scrapped).

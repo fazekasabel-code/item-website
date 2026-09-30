@@ -2,10 +2,10 @@
   "order": 3,
   "type": "academy",
   "years": [
-    2023
+    2021
   ],
-  "ongoing": false,
-  "status": "archived",
+  "ongoing": true,
+  "status": "current",
   "color": null,
   "source_lang": "en",
   "title": {
@@ -13,18 +13,25 @@
     "en": "HANGZAVART?"
   },
   "summary": {
-    "hu": "Nem akadémiai zenei akadémia: 24 zenész és zeneszerző Magyarországról, Romániából és Szerbiából kilenc napig alkotott együtt Zebegényben.",
-    "en": "A non-academic music academy: 24 musicians and composers from Hungary, Romania and Serbia co-creating for nine days in Zebegény."
+    "hu": "Nem-akadémikus zenei műhely: 2021 óta működő európai hálózat és nyári rezidenciák, ahol a legkülönbözőbb hátterű zenészek kérdőjelezik meg a zeneoktatás megszokott kategóriáit.",
+    "en": "A non-academic music academy: a European network since 2021 whose summer residencies bring musicians of every background together to question the categories of music education."
   },
   "place": {
-    "hu": "Zebegény",
-    "en": "Zebegény, Hungary"
+    "hu": "Göd (2022) · Zebegény (2023)",
+    "en": "Göd (2022) · Zebegény (2023), Hungary"
   },
-  "dates": {
-    "hu": "2023. június 21–30.",
-    "en": "21–30 June 2023"
-  },
+  "dates": null,
   "people": [
+    {
+      "role": {
+        "hu": "Koncepció és szervezés",
+        "en": "Concept and organising"
+      },
+      "names": [
+        "Fazekas Ábel",
+        "Sanna Bo"
+      ]
+    },
     {
       "role": {
         "hu": "Mentorok",
@@ -33,31 +40,65 @@
       "names": [
         "Bali János",
         "Bodnár Eszter",
+        "Dukay Barnabás",
         "John Duncan",
         "Márton Péter",
-        "Rimóczi István"
-      ]
-    },
-    {
-      "role": {
-        "hu": "Koncepció és szervezés",
-        "en": "Concept and organising"
-      },
-      "names": [
-        "Sanna Bo",
-        "Fazekas Ábel"
+        "Nagy Ákos",
+        "Pándi Balázs",
+        "Rimóczi István",
+        "Rubik Ernő"
       ]
     }
   ],
-  "partners": [],
+  "partners": [
+    {
+      "name": "Shoshin Theatre Association (RO)",
+      "url": null
+    },
+    {
+      "name": "Levegő – Vazduh – Air (RS)",
+      "url": null
+    },
+    {
+      "name": "KM28 (DE)",
+      "url": null
+    },
+    {
+      "name": "A4",
+      "url": null
+    },
+    {
+      "name": "89 Sound Art School",
+      "url": null
+    }
+  ],
   "funding": [
     {
       "funder": "eu",
       "reference": null
     }
   ],
-  "facts": [],
-  "links": [],
+  "facts": [
+    {
+      "label": {
+        "hu": "Program",
+        "en": "Programme"
+      },
+      "value": {
+        "hu": "Erasmus+",
+        "en": "Erasmus+"
+      }
+    }
+  ],
+  "links": [
+    {
+      "label": {
+        "hu": "hangzavart.com",
+        "en": "hangzavart.com"
+      },
+      "url": "https://hangzavart.com/"
+    }
+  ],
   "role": null,
   "cover": null,
   "logo": null,
