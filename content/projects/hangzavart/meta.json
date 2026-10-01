@@ -100,7 +100,7 @@
     }
   ],
   "role": null,
-  "cover": null,
+  "cover": "cover.jpg",
   "logo": null,
   "proofread": {
     "hu": false,
